@@ -1,0 +1,60 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UI
+build_property.RootNamespace = UI
+build_property.ProjectDir = C:\Source\Freelance\MTech\Employees\EmployeesUI\UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Source\Freelance\MTech\Employees\EmployeesUI\UI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Dialogs/CreateEmployeeDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nc1xDcmVhdGVFbXBsb3llZURpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Dialogs/MessageDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nc1xNZXNzYWdlRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Dialogs/UpdateEmployeeDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nc1xVcGRhdGVFbXBsb3llZURpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-v226h684v7
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-h1hcfmdrah
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Source/Freelance/MTech/Employees/EmployeesUI/UI/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

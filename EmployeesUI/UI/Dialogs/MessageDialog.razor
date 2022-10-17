@@ -1,0 +1,11 @@
+﻿<div class="p-2">
+    <p>@Message</p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Message { get; set; }
+
+    [CascadingParameter]
+    private BlazoredModalInstance _instance { get; set; } = default!;
+}

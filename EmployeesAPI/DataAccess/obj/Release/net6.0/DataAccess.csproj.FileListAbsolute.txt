@@ -1,0 +1,14 @@
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\bin\Release\net6.0\DataAccess.deps.json
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\bin\Release\net6.0\DataAccess.runtimeconfig.json
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\bin\Release\net6.0\DataAccess.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\bin\Release\net6.0\DataAccess.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.AssemblyInfo.cs
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\refint\DataAccess.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\DataAccess.genruntimeconfig.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\DataAccess\obj\Release\net6.0\ref\DataAccess.dll

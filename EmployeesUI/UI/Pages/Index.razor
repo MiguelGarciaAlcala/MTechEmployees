@@ -1,0 +1,116 @@
+﻿@page "/"
+
+<PageTitle>Employee Management</PageTitle>
+
+@using API.Base
+@using API.DTO.Common
+@using API.DTO.Employees
+@using Dialogs
+
+@inject IEmployeesAPI API
+
+<h1>Employee Management</h1>
+
+<div class="row py-3">
+    <div class="col-6 col-md-6 col-sm-6">
+        <input type="text" @onchange="@OnSearch" />
+    </div>
+    <div class="col-6 col-md-6 col-sm-6">
+        <div class="float-end">
+            <button class="btn-primary" @onclick="@OnCreate">Create</button>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>RFC</th>
+            <th>Full Name</th>
+            <th>Born Date</th>
+            <th>Status</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in _employees)
+        {
+            <tr>
+                <td>@employee.RFC</td>
+                <td>@employee.Name @employee.LastName</td>
+                <td>@employee.BornDate.ToString("d")</td>
+                <td>@employee.Status</td>
+                <td>
+                    <button class="btn-secondary" @onclick="async () => await OnUpdate(employee.ID)">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<EmployeeViewDTO> _employees;
+    private EmployeeFilterDTO _filter;
+
+    [CascadingParameter] 
+    public IModalService CreateEmployeeDialog { get; set; }
+
+    [CascadingParameter]
+    public IModalService UpdateEmployeeDialog { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _employees = new List<EmployeeViewDTO>();
+        _filter = new EmployeeFilterDTO();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetEmployees();
+    }
+
+    private async Task OnSearch(ChangeEventArgs e)
+    {
+        if(_filter != null)
+            _filter.FullName = e.Value?.ToString();
+
+        await GetEmployees();
+    }
+
+    private async Task GetEmployees() 
+    {
+        try
+        {
+            var response = await API.Employees.GetAllAsync(_filter);
+
+            _employees = response?.Data != null
+                ? (IEnumerable<EmployeeViewDTO>) response.Data
+                : new List<EmployeeViewDTO>();
+        } 
+        catch
+        {
+            _employees = new List<EmployeeViewDTO>();
+        }
+    }
+
+    private async Task OnCreate() 
+    {
+        var reference = CreateEmployeeDialog.Show<CreateEmployeeDialog>("Create Employee");
+        var result = await reference.Result;
+
+        if (result.Confirmed)
+            await GetEmployees();
+    }
+
+    private async Task OnUpdate(int id)
+    {
+        var args = new ModalParameters();
+        args.Add("Id", id);
+
+        var reference = UpdateEmployeeDialog.Show<UpdateEmployeeDialog>("Update Employee", args);
+        var result = await reference.Result;
+
+        if (result.Confirmed)
+            await GetEmployees();
+    }
+}

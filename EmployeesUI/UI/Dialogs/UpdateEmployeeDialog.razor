@@ -1,0 +1,144 @@
+﻿@using API.DTO.Employees
+@using API.Base
+
+@inject IEmployeesAPI API
+
+@if(_editContext != null) 
+{
+    <EditForm EditContext="@_editContext" OnSubmit="@OnSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group py-2">
+            <label for="first-name">First Name</label>
+            <InputText id="first-name" class="form-control" @bind-Value="_employee.Name" />
+        </div>
+
+        <div class="form-group py-2">
+            <label for="last-name">Last Name</label>
+            <InputText id="last-name" class="form-control" @bind-Value="_employee.LastName" />
+        </div>
+
+        <div class="form-group py-2">
+            <label for="rfc">RFC</label>
+            <InputText id="rfc" class="form-control" @bind-Value="_employee.RFC" />
+        </div>
+
+        <div class="form-group py-2">
+            <label for="born-date">Born Date</label>
+            <InputDate id="born-date" class="form-control" @bind-Value="_employee.BornDate" />
+        </div>
+
+        <div class="form-group py-2">
+            <label for="status">Status</label>
+            <InputSelect id="status" class="form-control" @bind-Value="_employee.Status">
+                <option value="@EmployeeStatus.NotSet">Not set</option>
+                <option value="@EmployeeStatus.Active">Active</option>
+                <option value="@EmployeeStatus.Inactive">Inactive</option>
+            </InputSelect>
+        </div>
+
+        <div class="float-end py-2">
+            <button type="submit" class="btn-primary">Save</button>
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; } = 0;
+
+    private EmployeeUpdateDTO _employee;
+    private bool _sending;
+
+    [CascadingParameter]
+    private BlazoredModalInstance _instance { get; set; } = default!;
+    private EditContext _editContext;
+
+    [CascadingParameter]
+    public IModalService MessageDialog { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SetEmployee();
+
+        _sending = false;
+        _editContext = new EditContext(_employee);
+    }
+
+    private async Task OnCancel(MouseEventArgs e)
+    {
+        await _instance.CloseAsync(ModalResult.Cancel());
+    }
+
+    private async Task OnSubmit()
+    {
+        try
+        {
+            if (!_sending)
+            {
+                _sending = true;
+
+                if (_editContext.Validate())
+                {
+                    var response = await API.Employees.UpdateAsync(Id, _employee);
+
+                    if (response == null)
+                        throw new Exception("Employee not updated!");
+                    else
+                    {
+                        if (!response.IsSuccessful())
+                            throw new Exception(response.Message());
+                        else
+                            await _instance.CloseAsync(ModalResult.Ok());
+                    }
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            var args = new ModalParameters();
+            args.Add("Message", ex.Message);
+
+            MessageDialog.Show<MessageDialog>("Error", args);
+            await _instance.CloseAsync(ModalResult.Cancel());
+        }
+
+        _sending = false;
+    }
+
+    private async Task<EmployeeUpdateDTO?> GetEmployee()
+    {
+        try
+        {
+            var response = await API.Employees.GetAsync(Id);
+
+            if (response != null && response.IsSuccessful())
+            {
+                var employee = (EmployeeViewDTO)response.Data;
+
+                return new EmployeeUpdateDTO
+                {
+                    Name = employee.Name,
+                    LastName = employee.LastName,
+                    RFC = employee.RFC,
+                    BornDate = employee.BornDate,
+                    Status = employee.Status
+                };
+            }
+        }
+        catch { }
+
+        return null;
+    }
+
+    private async Task SetEmployee()
+    {
+        var employee = await GetEmployee();
+
+        if (employee != null)
+            _employee = employee;
+        else
+            await _instance.CloseAsync(ModalResult.Cancel());
+    }
+}

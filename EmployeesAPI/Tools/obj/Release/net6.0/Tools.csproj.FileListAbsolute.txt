@@ -1,0 +1,12 @@
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\bin\Release\net6.0\Tools.deps.json
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\bin\Release\net6.0\Tools.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\bin\Release\net6.0\Tools.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.csproj.AssemblyReference.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.AssemblyInfoInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.AssemblyInfo.cs
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.csproj.CoreCompileInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\refint\Tools.dll
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\Tools.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesAPI\Tools\obj\Release\net6.0\ref\Tools.dll

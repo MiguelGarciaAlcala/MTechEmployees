@@ -1,0 +1,13 @@
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\bin\Debug\net6.0\appsettings.json
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\bin\Debug\net6.0\API.deps.json
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\bin\Debug\net6.0\API.dll
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\bin\Debug\net6.0\API.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.dll
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\refint\API.dll
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\API.pdb
+C:\Source\Freelance\MTech\Employees\EmployeesUI\Service\obj\Debug\net6.0\ref\API.dll
